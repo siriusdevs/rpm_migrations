@@ -1,0 +1,7 @@
+django-admin startproject $1
+cd $1
+# добавить в settings -> databases
+python3 manage.py startapp "$1_app"
+
+# добавить в settings -> INSTALLED_APPS 
+python3 manage.py migrate
