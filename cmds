@@ -1,7 +1,11 @@
-django-admin startproject $1
+django-admin startproject hobbies
 cd $1
+
 # добавить в settings -> databases
-python3 manage.py startapp "$1_app"
+python3 manage.py startapp hobbies_app
 
 # добавить в settings -> INSTALLED_APPS 
 python3 manage.py migrate
+
+# добавить cуперполователя для админки
+python3 manage.py createsuperuser
